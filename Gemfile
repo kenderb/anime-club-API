@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'hirb', '~> 0.7.3'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
