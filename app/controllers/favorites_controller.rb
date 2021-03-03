@@ -1,7 +1,6 @@
 class FavoritesController < ApplicationController
   include CurrentUserConcern
   def create
-    
   end
 
   def index
