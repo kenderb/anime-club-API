@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actioncable (6.0.3.5)
       actionpack (= 6.0.3.5)
@@ -58,6 +58,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.7.2)
       msgpack (~> 1.0)
@@ -76,9 +77,9 @@ GEM
     crass (1.0.6)
     erubi (1.10.0)
     ffi (1.14.2)
-    ffi (1.14.2-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hirb (0.7.3)
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
@@ -95,18 +96,17 @@ GEM
     mini_mime (1.0.2)
     minitest (5.14.4)
     msgpack (1.4.2)
-    nio4r (2.5.5)
-    nokogiri (1.11.1-x64-mingw32)
-      racc (~> 1.4)
+    nio4r (2.5.7)
     nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
     pg (1.2.3)
-    pg (1.2.3-x64-mingw32)
     public_suffix (4.0.6)
     puma (4.3.7)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -144,8 +144,6 @@ GEM
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
-    sassc (2.4.0-x64-mingw32)
-      ffi (~> 1.9)
     sassc-rails (2.1.2)
       railties (>= 4.0.0)
       sassc (>= 2.0)
@@ -170,8 +168,6 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2021.1)
-      tzinfo (>= 1.0.0)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -194,15 +190,17 @@ GEM
 
 PLATFORMS
   ruby
-  x64-mingw32
 
 DEPENDENCIES
+  bcrypt (~> 3.1, >= 3.1.16)
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  hirb (~> 0.7.3)
   jbuilder (~> 2.7)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
+  rack-cors
   rails (~> 6.0.3, >= 6.0.3.4)
   sass-rails (>= 6)
   selenium-webdriver
