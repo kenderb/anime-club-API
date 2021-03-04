@@ -40,7 +40,7 @@ animes = Anime.create([
     which performs the strange function of morphing bananas into piles of green gel."
   },
   { title: 'Gintama°', 
-    url_image: "https://myanimelist.net/anime/28977/Gintama%C2%B0/pics", 
+    url_image: "https://cdn.myanimelist.net/images/anime/3/72078.jpg", 
     description: "
     Gintoki, Shinpachi, and Kagura return as the fun-loving but broke members of the Yorozuya team! Living in an alternate-reality Edo, 
     where swords are prohibited and alien overlords have conquered Japan, they try to thrive on doing whatever 
