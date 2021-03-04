@@ -14,7 +14,6 @@ class FavoritesController < ApplicationController
       render json: {status: 500}
     end
   end
-
   def index
     if @current_user
       favorites = @current_user.favorites
