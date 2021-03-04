@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get :logged_in, to: "sessions#logged_in"
   root to: "static#home"
   resources :favorites, only: [:create, :index, :destroy]
+  post :user_favorites, to: "favorites#user_favorites"
 end
