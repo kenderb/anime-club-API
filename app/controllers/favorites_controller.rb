@@ -6,9 +6,10 @@ class FavoritesController < ApplicationController
       anime_id: params["favorite"]["anime_id"]
     )
     if favorite
+      fivorites_list = User.find(favorite.user_id).favorites
       render json: {
         status: :created,
-        user: favorite
+        fivorites_user_list: fivorites_list
       }
     else
       render json: {status: 500}
