@@ -4,8 +4,8 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head], credentials: true
   end
 
-  # allow do 
-  #   origins 'https://anime-rails-api.herokuapp.com/'
-  #   resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head], credentials: true
-  # end
+  allow do 
+    origins 'https://optimistic-khorana-f202db.netlify.app/'
+    resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head], credentials: true
+  end
 end 
