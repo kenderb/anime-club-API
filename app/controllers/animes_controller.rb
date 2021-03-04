@@ -11,4 +11,13 @@ class AnimesController < ApplicationController
     end
     
   end
+  def show
+    anime = Anime.find_by(id: params[:id])
+    if anime
+      render json: {
+        status: 200,
+        anime: anime,
+      }
+    end
+  end
 end
