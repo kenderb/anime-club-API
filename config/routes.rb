@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   root to: "static#home"
   resources :favorites, only: [:create, :index, :destroy]
   post :user_favorites, to: "favorites#user_favorites"
+  
 end
