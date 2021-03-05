@@ -1,7 +1,7 @@
 if Rails.env == "production"
   Rails.application.config.session_store :cookie_store, {
     :key => '_anime_club_app',
-    :domain => "frozen-hamlet-89922.herokuapp.com",
+    :domain => "evening-eyrie-51515.herokuapp.com",
     :same_site => :none,
     :secure => :true,
     :tld_length => 2
