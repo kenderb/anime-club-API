@@ -2,8 +2,8 @@ class FavoritesController < ApplicationController
   include CurrentUserConcern
   def create
     favorite = Favorite.create!(
-      user_id: params["favorite"]["user_id"],
-      anime_id: params["favorite"]["anime_id"]
+      user_id: params['favorite']['user_id'],
+      anime_id: params['favorite']['anime_id']
     )
     if favorite
       fivorites_list = User.find(favorite.user_id).favorites.pluck(:anime_id)
@@ -18,7 +18,7 @@ class FavoritesController < ApplicationController
   end
 
   def user_favorites
-    favorites = User.find_by(id: params["user"]["id"]).favorites.pluck(:anime_id)
+    favorites = User.find_by(id: params['user']['id']).favorites.pluck(:anime_id)
     if favorites
       render json: {
         status: 200,
@@ -26,10 +26,8 @@ class FavoritesController < ApplicationController
       }
     else
       render json: {
-        status: 404,
+        status: 404
       }
     end
   end
-
-    
 end

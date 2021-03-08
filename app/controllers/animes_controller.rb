@@ -1,23 +1,12 @@
 class AnimesController < ApplicationController
   def index
     animes = Anime.all
-    if animes
-      render json: {
-        status: 200,
-        anime_list: animes
-      }
-    else
-      render json: {status: 401}
-    end
-    
+    render json: { status: 200, anime_list: animes } if animes
+    render json: { status: 401 }
   end
+
   def show
     anime = Anime.find_by(id: params[:id])
-    if anime
-      render json: {
-        status: 200,
-        anime: anime,
-      }
-    end
+    render json: { status: 200, nime: anime } if anime
   end
 end
