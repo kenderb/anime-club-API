@@ -2,7 +2,6 @@ require 'rails_helper'
 require 'spec_helper'
 
 RSpec.describe User, type: :model do
-
   describe 'associations' do
     it { should have_many(:favorites) }
   end
