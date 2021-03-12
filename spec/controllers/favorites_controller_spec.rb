@@ -18,7 +18,7 @@ RSpec.describe FavoritesController, type: :controller do
       end
     end
   end
-  
+
   describe 'POST /user_favorites' do
     before do
       user
@@ -33,6 +33,4 @@ RSpec.describe FavoritesController, type: :controller do
       end
     end
   end
-
-  
 end

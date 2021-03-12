@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe RegistrationsController, type: :controller do
-
   describe 'POST /registrations' do
     before do
       post :create, params: {
